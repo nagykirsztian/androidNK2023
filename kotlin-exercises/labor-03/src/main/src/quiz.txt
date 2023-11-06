@@ -1,0 +1,60 @@
+What is Kotlin's primary use case?
+A. Web development
+B. Mobile app development
+C. Data analysis
+D. Game development
+2
+Which keyword is used to define a read-only property in Kotlin?
+A. val
+B. var
+C. const
+D. readonly
+1
+In Kotlin, what is the purpose of the `when` expression?
+A. To declare a new class
+B. To handle exceptions
+C. To replace the `if-else` statement for conditional branching
+D. To define a loop
+3
+Which type of inheritance does Kotlin support?
+A. Single inheritance
+B. Multiple inheritance
+C. Hybrid inheritance
+D. Hierarchical inheritance
+1
+What is the function extension mechanism in Kotlin called?
+A. Inheritance
+B. Overloading
+C. Extension Functions
+D. Overriding
+3
+Which of the following is not a basic data type in Kotlin?
+A. Int
+B. Double
+C. String
+D. Decimal
+4
+In Kotlin, what is the main benefit of using the `lateinit` modifier?
+A. It makes a variable immutable
+B. It ensures a variable is never null
+C. It defers the initialization of a non-null property
+D. It defines a constant value
+3
+Which operator is used for safe calls in Kotlin to prevent null pointer exceptions?
+A. ?
+B. !!
+C. ?:
+D. ?.
+4
+What is the Kotlin Standard Library function used to iterate over a collection and perform an operation on each element?
+A. for loop
+B. map
+C. forEach
+D. filter
+3
+Which Kotlin keyword is used to create an instance of a class without using the `new` keyword?
+A. create
+B. new
+C. instance
+D. constructor
+2
