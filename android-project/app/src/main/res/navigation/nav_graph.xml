@@ -3,40 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/homeFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.tasty.recipesapp.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.tasty.recipesapp.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.tasty.recipesapp.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_home_to_recipes"
+            app:destination="@id/recipesFragment" />
+        <action android:id="@+id/action_home_to_profile"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.tasty.recipesapp.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:name="com.tasty.recipesapp.fragment.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action android:id="@+id/action_profile_to_recipes_detail"
+            app:destination="@id/recipe_detailFragment" />
+        <action android:id="@+id/action_profile_to_newRecipe"
+            app:destination="@id/newRecipeFragment" />
+    </fragment>
+
     <fragment
-        android:id="@+id/recipeDetailFragment"
-        android:name="com.tasty.recipesapp.RecipeDetailFragment"
-        android:label="fragment_recipe_detail"
-        tools:layout="@layout/fragment_recipe_detail" />
-    <activity
-        android:id="@+id/splashActivity"
-        android:name="com.tasty.recipesapp.SplashActivity"
-        android:label="activity_splash"
-        tools:layout="@layout/activity_splash" />
+        android:id="@+id/recipe_detailFragment"
+        android:name="com.tasty.recipesapp.fragment.RecipeDetailFragment"
+        android:label="RecipeDetail"
+        tools:layout="@layout/fragment_recipe_detail">
+    </fragment>
+
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.tasty.recipesapp.RecipesFragment"
-        android:label="fragment_recipes"
-        tools:layout="@layout/fragment_recipes" >
-        <action
-            android:id="@+id/action_recipesFragment_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment" />
+        android:name="com.tasty.recipesapp.fragment.RecipesFragment"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipes">
+        <action android:id="@+id/action_recipes_to_recipes_detail"
+            app:destination="@id/recipe_detailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/newRecipeFragment"
+        android:name="com.tasty.recipesapp.fragment.NewRecipeFragment"
+        android:label="NewRecipe"
+        tools:layout="@layout/fragment_new_recipe">
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.tasty.recipesapp.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.tasty.recipesapp.activity.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+
+
 </navigation>
